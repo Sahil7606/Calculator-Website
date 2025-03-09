@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel = "stylesheet" href = "styles.css"></link>
+</head>
+<script src = "script.js" defer></script>
+<body>
+    <div id = "top-bar" class = "purple-background">Calculator</div>
+    <div id = "calculator-display">
+        <input id = "input-box">
+        </div>
+    <div id = "button-container" class = "purple-background">
+        <div id = "info">
+            <div id = "previous-entries">
+                <p>Previous Entries</p>
+                <ol></ol>
+            </div>
+            <div id = "variables">
+                <p>Variables</p>
+            </div>
+        </div>
+        <div id = "button-pad">
+            <div id = "right-buttons">
+                <div>
+                    <button id = "clear-button">Clear</button>
+                </div>
+                <div>
+                    <button>e</button>
+                    <button class = 'number'>7</button>
+                    <button class = 'number'>8</button>
+                    <button class = 'number'>9</button>
+                    <button> * </button>
+                </div>
+                <div>
+                    <button>&pi;</button>
+                    <button class = 'number'>4</button>
+                    <button class = 'number'>5</button>
+                    <button class = 'number'>6</button>
+                    <button> / </button>
+                </div>
+                <div>
+                    <button>x^</button>
+                    <button class = 'number'>1</button>
+                    <button class = 'number'>2</button>
+                    <button class = 'number'>3</button>
+                    <button> + </button>
+                </div>
+                <div>
+                    <button>->var</button>
+                    <button>x</button>
+                    <button class = 'number'>0</button>
+                    <button>.</button>
+                    <button> - </button>
+                </div>
+            </div>
+            <div id = "left-buttons">
+                <button id = "enter-button">Enter</button>
+                <button id = "backspace-button"><-</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

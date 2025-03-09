@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+
+    background: linear-gradient(to right, #792bad 20%, #873db2 40%, #8638b3 60%, #8839b8 80%);
+    background-size: 100% auto;
+} 
+
+input {
+    all: unset;
+}
+
+#top-bar {
+    flex-basis: 8vh;
+    flex-shrink: 1;
+    
+    padding: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+
+    background-color: rgb(208, 205, 205);
+}
+
+#input-box {
+    width: calc(100% - 100px);
+    height: 12vh;
+    background-color: white;
+    padding-right: 100px;
+    text-align: right;
+    font-size: 50px;
+}
+
+#button-container {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#info {
+    display: flex;
+    flex-direction: column  ;
+    flex-basis: 50%;
+    padding: 50px;
+    padding-top: 25px;
+
+    justify-content: center;
+}
+
+#previous-entries {
+    height: 320px;
+    background-color: whitesmoke;
+    margin: 5px;
+    border-radius: 15px;
+    border: solid 3px rgb(41, 41, 41);
+}
+
+#variables {
+    height: 215px;
+    background-color: whitesmoke;
+    margin: 5px;
+    border-radius: 15px;
+    border: solid 3px rgb(41, 41, 41);
+}
+
+#button-pad {
+    display: flex;
+    flex-basis: 50%;
+    padding: 50px;
+    padding-top: 25px;
+
+    justify-content: center;
+}
+
+#button-pad button {
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    border: solid 3px rgb(41, 41, 41);
+
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#right-buttons div {
+    display: flex;
+    flex-grow: 1;
+    width: auto;
+}
+
+#left-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#enter-button {
+    flex-grow: 4;
+}
+
+#backspace-button {
+    flex-grow: 2;
+}
+
+#clear-button {
+    flex-grow: 1;
+    width: auto;
+}
