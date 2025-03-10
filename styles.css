@@ -63,7 +63,7 @@ input {
 }
 
 #variables {
-    height: 215px;
+    height: 210px;
     background-color: whitesmoke;
     margin: 5px;
     border-radius: 15px;
@@ -101,12 +101,12 @@ input {
     flex-direction: column;
 }
 
-#enter-button {
-    flex-grow: 4;
+#button-pad #enter-button {
+    height: 320px;
 }
 
-#backspace-button {
-    flex-grow: 2;
+#button-pad #backspace-button {
+    height: 210px;
 }
 
 #clear-button {
