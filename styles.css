@@ -21,8 +21,8 @@ input {
     flex-basis: 8vh;
     flex-shrink: 1;
     
-    padding: 10px;
-    font-size: 50px;
+    padding: 1rem;
+    font-size: 5vmin;
     font-weight: bold;
     text-align: center;
 
@@ -30,63 +30,64 @@ input {
 }
 
 #input-box {
-    width: calc(100% - 100px);
+    width: calc(100% - 6rem);
     height: 12vh;
     background-color: white;
-    padding-right: 100px;
+    color: grey;
+    padding-right: 6rem;
     text-align: right;
-    font-size: 50px;
+    font-size: 5vmin;
 }
 
 #button-container {
-    flex-grow: 1;
+    flex-grow: 0;
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 80vh;
+    
+    padding-top: 2%;
 }
 
 #info {
     display: flex;
-    flex-direction: column  ;
+    flex-direction: column;
     flex-basis: 50%;
-    padding: 50px;
-    padding-top: 25px;
-
-    justify-content: center;
+    flex-shrink: 1;
+    padding: 7%;
+    padding-top: 2%;
 }
 
 #previous-entries {
-    height: 320px;
+    flex-basis: calc(33vmin + 2rem);
     background-color: whitesmoke;
-    margin: 5px;
-    border-radius: 15px;
-    border: solid 3px rgb(41, 41, 41);
+    margin: 0.5rem;
+    border-radius: 1rem;
+    border: solid 0.2rem rgb(41, 41, 41);
 }
 
 #variables {
-    height: 210px;
+    flex-basis: calc(22vmin + 1rem);
     background-color: whitesmoke;
-    margin: 5px;
-    border-radius: 15px;
-    border: solid 3px rgb(41, 41, 41);
+    margin: 0.5rem;
+    border-radius: 1rem;
+    border: solid 0.2rem rgb(41, 41, 41);
 }
 
 #button-pad {
     display: flex;
     flex-basis: 50%;
-    padding: 50px;
-    padding-top: 25px;
-
+    padding: 4%;
+    padding-top: 2%;
     justify-content: center;
 }
 
 #button-pad button {
-    margin: 5px;
-    height: 100px;
-    width: 100px;
-    border-radius: 15px;
-    border: solid 3px rgb(41, 41, 41);
-
-    font-size: xx-large;
+    margin: 0.5rem;
+    height: 11vmin;
+    width: 11vmin;
+    border-radius: 1rem;
+    border: solid 0.2rem rgb(41, 41, 41);
+    font-size: 3vmin;
     font-weight: bold;
 }
 
@@ -102,11 +103,11 @@ input {
 }
 
 #button-pad #enter-button {
-    height: 320px;
+    flex-basis: calc(33vmin + 2rem);
 }
 
 #button-pad #backspace-button {
-    height: 210px;
+    flex-basis: calc(22vmin + 1rem);
 }
 
 #clear-button {

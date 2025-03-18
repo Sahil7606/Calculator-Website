@@ -1,8 +1,66 @@
+// Website Functionality Code
+const inputBox = document.querySelector('#input-box');
+const buttonContainer = document.querySelector('#button-container');
+
+let inputClicked = false;
+inputBox.addEventListener('click', () => {
+    if (!inputClicked)
+    {
+        clearInput();
+    }
+});
+
+buttonContainer.addEventListener('click', (e) => {
+    if (!inputClicked)
+    {
+        clearInput();
+    }
+
+    if (e.target.classList.contains('adds-to-input'))
+    {
+        inputBox.value += e.target.textContent;
+    }
+    else
+    {
+        if (e.target.id == 'enter-button')
+        {
+            inputBox.value = calculate(inputBox.value);
+        }
+        else if (e.target.id == 'clear-button')
+        {
+            clearInput();
+        }
+        else if (e.target.id == 'backspace-button')
+        {
+            if (inputBox.value.length > 0)
+            {
+                inputBox.value = inputBox.value.slice(0, -1);
+            }
+        }
+    }
+});
+
+function clearInput()
+{
+    inputBox.value = '';
+    inputBox.style.color = 'black'
+    inputClicked = 'True';
+}
+
+// Calculator Code
 const operators = ['+', '-', '*', '/', '^'];
 const operatorPrecendence = {
     '+': 1, '-': 1,
     '*': 2, '/': 2,
     '^': 3
+}
+
+function calculate(expression)
+{
+    tokenized = tokenizeExpression(expression);
+    result = evaluateExpression(toPostfix(tokenized));
+
+    return result;
 }
 
 function evaluateExpression(expression)
@@ -190,3 +248,5 @@ function isOperator(char)
     
     return operators.includes(char);
 }
+
+console.log(calculate('5 * (6 - 9) / 8 + 3'));
