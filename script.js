@@ -60,7 +60,7 @@ function calculate(expression)
     tokenized = tokenizeExpression(expression);
     result = evaluateExpression(toPostfix(tokenized));
 
-    return result;
+    return roundToDecimal(result, 6);
 }
 
 function evaluateExpression(expression)
@@ -249,4 +249,8 @@ function isOperator(char)
     return operators.includes(char);
 }
 
-console.log(calculate('5 * (6 - 9) / 8 + 3'));
+function roundToDecimal(number, decimals) 
+{
+    const factor = Math.pow(10, decimals);
+    return Math.round(number * factor) / factor;
+}
